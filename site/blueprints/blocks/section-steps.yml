@@ -1,0 +1,34 @@
+name: Section étapes
+label: Section – Étapes
+icon: list-numbers
+wysiwyg: true
+preview: fields
+
+fields:
+  id:
+    label: Ancre (optionnel)
+    type: text
+    width: 1/3
+  title:
+    label: Titre de section
+    type: text
+    width: 2/3
+
+  steps:
+    label: Étapes
+    type: structure
+    fields:
+      icon:
+        label: Picto
+        type: files
+        multiple: false
+      stepTitle:
+        label: Titre
+        type: text
+      stepText:
+        label: Description
+        type: textarea
+      highlight:
+        label: Mise en valeur ?
+        type: toggle
+        text: oui/non

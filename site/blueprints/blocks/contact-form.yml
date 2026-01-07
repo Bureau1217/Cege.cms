@@ -1,0 +1,82 @@
+name: Formulaire de contact
+label: Formulaire de contact
+icon: email
+wysiwyg: true
+preview: contact-form
+
+fields:
+  formHeading:
+    label: Configuration du formulaire
+    type: headline
+
+  emailTo:
+    label: Email de destination
+    type: email
+    placeholder: "contact@votresite.com"
+    help: "L'adresse email qui recevra les messages"
+    width: 1/2
+
+  successMessage:
+    label: Message de confirmation
+    type: text
+    placeholder: "Merci ! Votre message a été envoyé."
+    default: "Merci ! Votre message a été envoyé avec succès."
+    width: 1/2
+
+  fieldsHeading:
+    label: Champs du formulaire
+    type: headline
+
+  showName:
+    label: Afficher le champ Nom
+    type: toggle
+    default: true
+    width: 1/3
+
+  showEmail:
+    label: Afficher le champ Email
+    type: toggle
+    default: true
+    width: 1/3
+
+  showPhone:
+    label: Afficher le champ Téléphone
+    type: toggle
+    default: true
+    width: 1/3
+
+  showSubject:
+    label: Afficher le champ Sujet
+    type: toggle
+    default: false
+    width: 1/3
+
+  showMessage:
+    label: Afficher le champ Message
+    type: toggle
+    default: true
+    width: 1/3
+
+  requireConsent:
+    label: Demander le consentement RGPD
+    type: toggle
+    default: true
+    help: "Ajoute une case à cocher pour accepter la politique de confidentialité"
+    width: 1/3
+
+  buttonLabel:
+    label: Texte du bouton
+    type: text
+    placeholder: "Envoyer"
+    default: "Envoyer le message"
+    width: 1/2
+
+  buttonStyle:
+    label: Style du bouton
+    type: select
+    options:
+      primary: Bouton principal
+      secondary: Bouton secondaire
+      outline: Bouton contour
+    default: primary
+    width: 1/2

@@ -1,0 +1,30 @@
+name: Titre
+label: Titre
+icon: title
+
+fields:
+  level:
+    label: Niveau
+    type: select
+    options:
+      h1: H1
+      h2: H2
+      h3: H3
+      h4: H4
+    default: h2
+    width: 1/2
+  color:
+    label: Couleur
+    type: select
+    options:
+      primary: Principale
+      secondary: Secondaire
+      accent: Accent
+      neutral: Blanc
+      dark: Noir
+    default: primary
+    width: 1/2
+  text:
+    label: Texte du titre
+    type: textarea
+    size: small

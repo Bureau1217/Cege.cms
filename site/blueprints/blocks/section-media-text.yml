@@ -1,0 +1,49 @@
+name: Section média + texte
+label: Section – Image / Picto + Texte
+icon: layout
+wysiwyg: true
+preview: fields
+
+fields:
+  id:
+    label: Ancre (optionnel)
+    type: text
+    width: 1/3
+  title:
+    label: Titre de section
+    type: text
+    width: 2/3
+
+  layout:
+    label: Disposition
+    type: select
+    options:
+      image-left: Image à gauche / texte à droite
+      image-right: Image à droite / texte à gauche
+      icon-top: Picto au-dessus du texte
+    default: image-right
+
+  mediaType:
+    label: Type de média
+    type: select
+    options:
+      image: Image
+      icon: Picto
+    default: image
+
+  media:
+    label: Image ou picto
+    type: files
+    multiple: false
+    layout: cards
+
+  text:
+    label: Texte principal
+    type: textarea
+
+  note:
+    label: Texte secondaire (optionnel)
+    type: textarea
+    buttons:
+      - bold
+      - link

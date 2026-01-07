@@ -1,0 +1,9 @@
+name: Liste
+label: Liste
+icon: list-bullet
+
+fields:
+  text:
+    label: Éléments
+    type: list
+    marks: [bold, italic, link]

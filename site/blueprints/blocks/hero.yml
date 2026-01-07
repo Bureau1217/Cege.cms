@@ -1,0 +1,34 @@
+name: Hero
+label: Hero
+icon: flag
+wysiwyg: true
+preview: fields
+
+fields:
+  title:
+    label: Titre principal
+    type: textarea
+    placeholder: "Ex: UNE APPROCHE HUMAINE, UNE ÉTUDE ENGAGÉE"
+    help: "Le titre principal affiché dans le hero"
+
+  text:
+    label: Texte d'introduction
+    type: textarea
+    placeholder: "Texte de présentation de votre entreprise"
+    help: "Le texte d'introduction affiché sous le titre"
+
+  image:
+    label: Image / Photo
+    type: files
+    multiple: false
+    layout: cards
+    help: "Image affichée à droite du hero"
+
+  theme:
+    label: Thème
+    type: select
+    options:
+      dark: Fond sombre
+      light: Fond clair
+    default: dark
+    help: "Couleur de fond du bloc de gauche"

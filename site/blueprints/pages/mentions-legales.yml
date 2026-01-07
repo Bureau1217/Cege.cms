@@ -1,0 +1,20 @@
+title: Mentions legales
+
+tabs:
+  content:
+    label: Contenu
+    columns:
+      - width: 1/1
+        fields:
+          texte:
+            label: Contenu
+            type: blocks
+            pretty: true
+            help: "Contenu de la page mentions legales"
+            fieldsets:
+              - heading
+              - text
+              - list
+
+  seo:
+    extends: seo/page

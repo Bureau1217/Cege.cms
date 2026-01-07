@@ -1,0 +1,50 @@
+name: Items avec pictos
+label: Items avec pictos
+icon: list
+wysiwyg: true
+preview: feature-item
+
+fields:
+  itemsHeading:
+    label: Liste des items
+    type: headline
+
+  items:
+    label: Items
+    type: structure
+    fields:
+      number:
+        label: Numéro
+        type: text
+        placeholder: "01, 1, A..."
+        width: 1/3
+
+      icon:
+        label: Picto
+        type: files
+        multiple: false
+        layout: cards
+        width: 1/3
+
+      title:
+        label: Titre
+        type: text
+        placeholder: "Titre de l'item"
+        width: 1/3
+
+      text:
+        label: Description
+        type: textarea
+        buttons:
+          - bold
+          - italic
+          - link
+
+      alignment:
+        label: Alignement du texte
+        type: select
+        options:
+          left: Gauche
+          center: Centré
+        default: left
+        width: 1/2

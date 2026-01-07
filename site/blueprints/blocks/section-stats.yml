@@ -1,0 +1,20 @@
+name: Section statistiques
+label: Section – Statistiques
+icon: chart
+wysiwyg: true
+preview: fields
+
+fields:
+  title:
+    label: Titre de section (optionnel)
+    type: text
+  stats:
+    label: Statistiques
+    type: structure
+    fields:
+      value:
+        label: Valeur
+        type: text  # ex : 6+, 300+, 24/7
+      label:
+        label: Libellé
+        type: text

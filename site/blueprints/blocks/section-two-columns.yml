@@ -1,0 +1,64 @@
+name: Section deux colonnes
+label: Section – Deux colonnes
+icon: grid
+wysiwyg: true
+preview: fields
+
+fields:
+  id:
+    label: Ancre (optionnel)
+    type: text
+    width: 1/3
+  title:
+    label: Titre de section
+    type: text
+    width: 2/3
+
+  columnLeft:
+    label: Colonne de gauche
+    type: fields
+    fields:
+      leftTitle:
+        label: Titre (optionnel)
+        type: text
+      leftText:
+        label: Texte
+        type: textarea
+        size: large
+
+  columnRight:
+    label: Colonne de droite
+    type: fields
+    fields:
+      rightTitle:
+        label: Titre (optionnel)
+        type: text
+      rightText:
+        label: Texte
+        type: textarea
+        size: large
+      rightList:
+        label: Liste à puces (optionnel)
+        type: list
+        fields:
+          item:
+            label: Élément
+            type: text
+
+  spacing:
+    label: Marges verticales
+    type: select
+    options:
+      small: Petite
+      medium: Moyenne
+      large: Grande
+    default: medium
+
+  backgroundColor:
+    label: Couleur de fond
+    type: select
+    options:
+      white: Blanc
+      light-gray: Gris clair
+      dark: Sombre
+    default: white

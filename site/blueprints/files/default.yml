@@ -1,0 +1,7 @@
+title: File
+
+fields:
+  alt:
+    label: Texte alternatif (ALT)
+    type: text
+    help: Texte lu par les lecteurs d'ecran et affiche si l'image ne charge pas.

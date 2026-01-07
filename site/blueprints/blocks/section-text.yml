@@ -1,0 +1,33 @@
+name: Section texte
+label: Section – Texte
+icon: text
+wysiwyg: true
+preview: fields
+
+fields:
+  id:
+    label: Ancre (optionnel)
+    type: text
+    width: 1/2
+  title:
+    label: Titre de section
+    type: text
+    width: 1/2
+  text:
+    label: Texte
+    type: textarea
+  align:
+    label: Alignement
+    type: select
+    options:
+      left: Gauche
+      center: Centré
+    default: left
+  spacing:
+    label: Marges verticales
+    type: select
+    options:
+      small: Petite
+      medium: Moyenne
+      large: Grande
+    default: medium

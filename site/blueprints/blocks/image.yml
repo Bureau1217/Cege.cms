@@ -1,0 +1,36 @@
+name: Image
+label: Image
+icon: image
+
+fields:
+  image:
+    label: Image
+    type: files
+    multiple: false
+    layout: cards
+  alt:
+    label: Texte alternatif (ALT)
+    type: text
+    help: Texte lu par les lecteurs d'ecran et affiche si l'image ne charge pas.
+  caption:
+    label: Légende (optionnel)
+    type: text
+  size:
+    label: Taille
+    type: select
+    options:
+      small: Petite
+      medium: Moyenne
+      large: Grande
+      full: Pleine largeur
+    default: medium
+    width: 1/2
+  align:
+    label: Alignement
+    type: select
+    options:
+      left: Gauche
+      center: Centré
+      right: Droite
+    default: center
+    width: 1/2

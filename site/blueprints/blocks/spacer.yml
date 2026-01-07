@@ -1,0 +1,14 @@
+name: Espace
+label: Espace vertical
+icon: angle-down
+
+fields:
+  size:
+    label: Taille de l'espace
+    type: select
+    options:
+      small: Petit (20px)
+      medium: Moyen (40px)
+      large: Grand (60px)
+      xlarge: Très grand (100px)
+    default: medium

@@ -1,0 +1,82 @@
+name: Coordonnées
+label: Coordonnées
+icon: address
+wysiwyg: true
+preview: contact-info
+
+fields:
+  heading:
+    label: Configuration
+    type: headline
+
+  title:
+    label: Titre de la section
+    type: text
+    placeholder: "Ex: Nos coordonnées, Contactez-nous..."
+    width: 1/2
+
+  layout:
+    label: Disposition
+    type: select
+    options:
+      grid: Grille
+      list: Liste
+    default: grid
+    width: 1/2
+
+  itemsHeading:
+    label: Informations de contact
+    type: headline
+
+  items:
+    label: Items
+    type: structure
+    fields:
+      type:
+        label: Type
+        type: select
+        options:
+          address: Adresse
+          phone: Téléphone
+          email: Email
+          hours: Horaires
+          social: Réseaux sociaux
+          custom: Personnalisé
+        default: phone
+        width: 1/3
+
+      icon:
+        label: Icône personnalisée (optionnel)
+        type: files
+        multiple: false
+        layout: cards
+        help: "Laissez vide pour utiliser l'icône par défaut"
+        width: 1/3
+
+      label:
+        label: Label
+        type: text
+        placeholder: "Ex: Téléphone, Email..."
+        width: 1/3
+
+      content:
+        label: Contenu
+        type: textarea
+        placeholder: "Ex: +33 1 23 45 67 89, contact@votresite.com..."
+        buttons:
+          - bold
+          - link
+
+      link:
+        label: Lien (optionnel)
+        type: text
+        placeholder: "tel:+33123456789, mailto:contact@email.com, https://..."
+        help: "Pour rendre le contenu cliquable"
+        width: 1/2
+
+      highlight:
+        label: Mettre en valeur
+        type: toggle
+        default: false
+        help: "Affiche cet item avec un style différent"
+        width: 1/2

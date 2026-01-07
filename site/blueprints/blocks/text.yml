@@ -1,0 +1,19 @@
+name: Texte
+label: Paragraphe
+icon: text
+
+fields:
+  text:
+    label: Contenu
+    type: writer
+    marks: [bold, italic, link]
+  color:
+    label: Couleur
+    type: select
+    options:
+      primary: Principale
+      secondary: Secondaire
+      accent: Accent
+      neutral: Blanc
+      dark: Noir
+    default: dark

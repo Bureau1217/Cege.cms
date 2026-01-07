@@ -1,0 +1,68 @@
+name: Témoignages
+label: Témoignages / Avis
+icon: quote
+wysiwyg: true
+preview: testimonials
+
+fields:
+  heading:
+    label: Configuration
+    type: headline
+
+  title:
+    label: Titre de la section
+    type: text
+    placeholder: "Ex: Ils nous font confiance, Avis clients..."
+    width: 1/2
+
+  columns:
+    label: Nombre de colonnes
+    type: select
+    options:
+      1: 1 colonne
+      2: 2 colonnes
+      3: 3 colonnes
+    default: 3
+    width: 1/2
+
+  testimonialsHeading:
+    label: Liste des témoignages
+    type: headline
+
+  testimonials:
+    label: Témoignages
+    type: structure
+    fields:
+      name:
+        label: Nom de la personne
+        type: text
+        placeholder: "Jean Dupont"
+        width: 1/2
+
+      rating:
+        label: Note (étoiles)
+        type: number
+        min: 1
+        max: 5
+        default: 5
+        width: 1/2
+
+      comment:
+        label: Commentaire / Avis
+        type: textarea
+        placeholder: "Excellent service, très professionnel..."
+        buttons:
+          - bold
+          - italic
+
+      role:
+        label: Fonction / Contexte (optionnel)
+        type: text
+        placeholder: "Client particulier, Chef d'entreprise..."
+        width: 1/2
+
+      date:
+        label: Date (optionnel)
+        type: text
+        placeholder: "Il y a 2 mois, Janvier 2024..."
+        width: 1/2

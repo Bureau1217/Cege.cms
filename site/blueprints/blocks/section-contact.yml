@@ -1,0 +1,36 @@
+name: Contact
+label: Contact
+icon: address
+
+fields:
+  sectionTitle:
+    label: Titre de la section
+    type: text
+    default: "Contact"
+    width: 1/2
+
+  backgroundColor:
+    label: Couleur de fond
+    type: select
+    options:
+      none: Aucune
+      primary: Couleur principale
+      secondary: Couleur secondaire
+      accent: Couleur accent
+      neutral: Couleur neutre
+      dark: Couleur sombre
+      white: Blanc
+      light-gray: Gris clair
+    default: none
+    width: 1/2
+
+  content:
+    label: Contenu
+    type: blocks
+    fieldsets:
+      - heading
+      - text
+      - image
+      - contact-info
+      - contact-form
+      - spacer

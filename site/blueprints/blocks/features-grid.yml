@@ -1,0 +1,61 @@
+name: Grille de pictos
+label: Grille de pictos
+icon: grid
+wysiwyg: true
+preview: fields
+
+fields:
+  columns:
+    label: Nombre de colonnes
+    type: select
+    options:
+      1: 1 colonne
+      2: 2 colonnes
+      3: 3 colonnes
+      4: 4 colonnes
+    default: 3
+    width: 1/2
+
+  gap:
+    label: Espacement entre les items
+    type: select
+    options:
+      small: Petit
+      medium: Moyen
+      large: Grand
+    default: medium
+    width: 1/2
+
+  items:
+    label: Items
+    type: structure
+    fields:
+      icon:
+        label: Picto (SVG, PNG, JPG)
+        type: files
+        multiple: false
+        layout: cards
+        width: 1/3
+
+      showNumber:
+        label: Afficher numéro
+        type: toggle
+        default: false
+        width: 1/3
+
+      number:
+        label: Numéro
+        type: text
+        placeholder: "01, 1, A..."
+        width: 1/3
+
+      title:
+        label: Titre
+        type: text
+
+      text:
+        label: Description
+        type: textarea
+        buttons:
+          - bold
+          - italic

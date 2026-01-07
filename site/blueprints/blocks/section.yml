@@ -1,0 +1,65 @@
+name: Section
+label: Section
+icon: box
+preview: previews/section
+
+fields:
+  sectionName:
+    label: Nom de la section
+    type: text
+    placeholder: "Ex: Notre Entreprise, Nos Services, Notre Démarche..."
+    help: "Donnez un nom identifiable à cette section"
+    width: 1/2
+
+  addToMenu:
+    label: Ajouter au menu de navigation
+    type: toggle
+    default: false
+    help: "Si activé, cette section apparaîtra dans le menu avec son nom"
+    width: 1/2
+
+  layout:
+    label: Disposition
+    type: select
+    options:
+      one-column: 1 colonne
+      two-columns: 2 colonnes
+      three-columns: 3 colonnes
+    default: one-column
+    width: 1/3
+
+  backgroundColor:
+    label: Couleur de fond
+    type: select
+    options:
+      none: Aucune
+      primary: Couleur principale
+      secondary: Couleur secondaire
+      accent: Couleur accent
+      neutral: Couleur neutre
+      dark: Couleur sombre
+      white: Blanc
+      light-gray: Gris clair
+    default: none
+    width: 1/3
+
+  # === CONTENU ===
+  contentHeading:
+    label: Contenu de la section
+    type: headline
+
+  content:
+    label: Éléments de contenu
+    type: blocks
+    fieldsets:
+      - heading
+      - text
+      - image
+      - feature-item
+      - features-grid
+      - testimonials
+      - contact-form
+      - contact-info
+      - list
+      - button
+      - spacer

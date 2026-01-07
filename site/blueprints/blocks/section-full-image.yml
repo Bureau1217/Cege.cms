@@ -1,0 +1,49 @@
+name: Section image pleine page
+label: Section – Image pleine page
+icon: image
+wysiwyg: true
+preview: section-full-image
+
+fields:
+  sectionName:
+    label: Nom de la section
+    type: text
+    placeholder: "Ex: Bannière, Visual..."
+    help: "Donnez un nom identifiable à cette section"
+    width: 1/2
+
+  addToMenu:
+    label: Ajouter au menu de navigation
+    type: toggle
+    default: false
+    help: "Si activé, cette section apparaîtra dans le menu avec son nom"
+    width: 1/2
+
+  image:
+    label: Image pleine page
+    type: files
+    multiple: false
+    layout: cards
+    help: "L'image sera affichée en pleine largeur"
+  alt:
+    label: Texte alternatif (ALT)
+    type: text
+    help: Texte lu par les lecteurs d'ecran et affiche si l'image ne charge pas.
+
+  height:
+    label: Hauteur de la section
+    type: select
+    options:
+      small: Petite (300px)
+      medium: Moyenne (500px)
+      large: Grande (700px)
+      full: Plein écran (100vh)
+    default: large
+    width: 1/2
+
+  overlay:
+    label: Assombrir l'image
+    type: toggle
+    default: false
+    help: "Ajoute un calque sombre semi-transparent"
+    width: 1/2

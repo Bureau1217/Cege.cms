@@ -1,0 +1,32 @@
+title: Page
+
+tabs:
+  content:
+    label: Contenu
+    columns:
+      - width: 1/1
+        fields:
+          sections:
+            label: Sections de la page
+            type: blocks
+            pretty: true
+            fieldsets:
+              - hero
+              - heading
+              - text
+              - image
+              - feature-item
+              - features-grid
+              - testimonials
+              - contact-info
+              - contact-form
+              - list
+              - button
+              - spacer
+              - section-full-image
+              - section-avis
+              - section-contact
+              - section-formulaire
+
+  seo:
+    extends: seo/page

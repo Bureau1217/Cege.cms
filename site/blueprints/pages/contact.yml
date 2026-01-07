@@ -1,0 +1,43 @@
+title: Contact
+
+tabs:
+  content:
+    label: Contenu
+    columns:
+      - width: 1/1
+        fields:
+          # === FORMULAIRE ===
+          formulaireHeading:
+            label: Formulaire
+            type: headline
+
+          formulaire_titre:
+            label: Titre de la section
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - list
+
+          formulaire_intro:
+            label: Texte d'introduction
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - list
+            help: "Texte affiche a gauche du formulaire"
+
+          formulaire:
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - contact-form
+              - spacer
+
+  seo:
+    extends: seo/page

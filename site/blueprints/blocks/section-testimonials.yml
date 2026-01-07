@@ -1,0 +1,28 @@
+name: Section témoignages
+label: Section – Témoignages
+icon: quote
+wysiwyg: true
+preview: fields
+
+fields:
+  title:
+    label: Titre
+    type: text
+
+  testimonials:
+    label: Témoignages
+    type: structure
+    fields:
+      name:
+        label: Nom
+        type: text
+      role:
+        label: Fonction / contexte (optionnel)
+        type: text
+      quote:
+        label: Témoignage
+        type: textarea
+      rating:
+        label: Étoiles (1–5)
+        type: number
+        width: 1/2

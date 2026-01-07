@@ -1,0 +1,32 @@
+name: Bouton
+label: Bouton / Lien
+icon: link
+
+fields:
+  text:
+    label: Texte du bouton
+    type: text
+    width: 1/2
+  link:
+    label: Lien
+    type: url
+    width: 1/2
+  style:
+    label: Style
+    type: select
+    options:
+      primary: Bouton principal
+      secondary: Bouton secondaire
+      outline: Bouton contour
+      link: Simple lien
+    default: primary
+    width: 1/2
+  align:
+    label: Alignement
+    type: select
+    options:
+      left: Gauche
+      center: Centré
+      right: Droite
+    default: left
+    width: 1/2

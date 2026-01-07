@@ -1,0 +1,157 @@
+title: Page d'accueil
+
+tabs:
+  content:
+    label: Contenu
+    columns:
+      - width: 1/1
+        fields:
+          # === LOGO ===
+          logoHeading:
+            label: Logo du site
+            type: headline
+
+          menu_logo:
+            label: Logo pour le menu
+            type: files
+            multiple: false
+            layout: cards
+            help: "Affiche dans le menu (header)"
+
+          # === HERO ===
+          heroHeading:
+            label: Hero
+            type: headline
+
+          hero_titre:
+            label: Titre
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - list
+
+          hero_texte:
+            label: Texte
+            type: textarea
+
+          hero_image:
+            label: Photo
+            type: files
+            multiple: false
+            layout: cards
+
+          # === NOTRE ENTREPRISE ===
+          notreEntrepriseHeading:
+            label: Notre Entreprise
+            type: headline
+
+          notreEntreprise_titre:
+            label: Titre de la section
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - list
+
+          notreEntreprise_colonne_gauche:
+            label: Colonne de gauche
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - image
+              - feature-item
+              - list
+              - spacer
+            width: 1/2
+
+          notreEntreprise_colonne_droite:
+            label: Colonne de droite
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - image
+              - feature-item
+              - list
+              - spacer
+            width: 1/2
+
+          # === NOS SERVICES ===
+          nosServicesHeading:
+            label: Nos Services
+            type: headline
+            help: "Les cartes de services sont récupérées automatiquement depuis la page Services"
+
+          nosServices_titre:
+            label: Titre de la section
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - list
+
+          nosServices_cartes_taille:
+            label: Taille des titres des cartes
+            type: select
+            options:
+              small: Petite
+              medium: Moyenne
+              large: Grande
+            default: medium
+
+          nosServices_cartes_couleur:
+            label: Couleur des titres des cartes
+            type: select
+            options:
+              primary: Principale
+              secondary: Secondaire
+              accent: Accent
+              neutral: Blanc
+              dark: Noir
+            default: neutral
+
+          # === AVIS ===
+          avisHeading:
+            label: Avis
+            type: headline
+
+          avis_titre:
+            label: Titre de la section
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - list
+
+          avis:
+            type: blocks
+            pretty: true
+            fieldsets:
+              - heading
+              - text
+              - testimonials
+              - button
+              - spacer
+
+          # === IMAGE ===
+          imageHeading:
+            label: Image
+            type: headline
+
+          image:
+            type: blocks
+            pretty: true
+            fieldsets:
+              - section-full-image
+              - image
+
+  seo:
+    extends: seo/page
