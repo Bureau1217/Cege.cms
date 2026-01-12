@@ -1,12 +1,8 @@
 <?php
 
 return [
-  'debug' => true,
   'api' => [
-    'basicAuth' => false,        // Désactive l'authentification basique en local
-    'allowInsecure' => true      // Accepte HTTP en local
+    'allowInsecure' => true,
   ],
-  'kql' => [
-    'auth' => false              // KQL sans authentification en local
-  ]
+  'debug' => true
 ];
