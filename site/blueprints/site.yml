@@ -39,6 +39,20 @@ tabs:
               - footer
               - mentions-legales
 
+          logo_site:
+            type: fields
+            fields:
+              logo_separator:
+                type: line
+
+              menu_logo:
+                label: Logo du site
+                type: files
+                multiple: false
+                layout: list
+                size: small
+                help: "Affiche dans le menu (header)"
+
   # Onglet Design
   design:
     label: Design

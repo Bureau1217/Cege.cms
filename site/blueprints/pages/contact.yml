@@ -5,39 +5,41 @@ tabs:
     label: Contenu
     columns:
       - width: 1/1
-        fields:
-          # === FORMULAIRE ===
-          formulaireHeading:
-            label: Formulaire
-            type: headline
-
-          formulaire_titre:
-            label: Titre de la section
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - list
-
-          formulaire_intro:
-            label: Texte d'introduction
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - list
-            help: "Texte affiche a gauche du formulaire"
-
+        sections:
           formulaire:
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - contact-form
-              - spacer
+            type: fields
+            fields:
+              # === FORMULAIRE ===
+              formulaireHeading:
+                label: Formulaire
+                type: headline
+
+              formulaire_titre:
+                label: Titre de la section
+                type: text
+                width: 1/2
+
+              formulaire:
+                label: Contenu du formulaire
+                type: blocks
+                pretty: true
+                fieldsets:
+                  - heading
+                  - text
+                  - contact-form
+                  - spacer
+                width: 1/2
+
+              formulaire_intro:
+                label: Texte d'introduction
+                type: blocks
+                pretty: true
+                fieldsets:
+                  - heading
+                  - text
+                  - list
+                help: "Texte affiche a gauche du formulaire"
+                width: 1/2
 
   seo:
     extends: seo/page

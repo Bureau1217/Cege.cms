@@ -29,13 +29,6 @@ tabs:
           - list
         help: "Titre affiché en haut du footer"
 
-      texte:
-        label: Texte d'accroche
-        type: textarea
-        default: "Besoin d'un contrôle électrique ou d'une expertise ?"
-        help: "Texte de présentation affiché dans le footer"
-        width: 1/2
-
       separateur:
         label: Informations de contact
         type: headline

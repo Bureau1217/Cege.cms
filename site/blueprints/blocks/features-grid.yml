@@ -5,27 +5,6 @@ wysiwyg: true
 preview: fields
 
 fields:
-  columns:
-    label: Nombre de colonnes
-    type: select
-    options:
-      1: 1 colonne
-      2: 2 colonnes
-      3: 3 colonnes
-      4: 4 colonnes
-    default: 3
-    width: 1/2
-
-  gap:
-    label: Espacement entre les items
-    type: select
-    options:
-      small: Petit
-      medium: Moyen
-      large: Grand
-    default: medium
-    width: 1/2
-
   items:
     label: Items
     type: structure

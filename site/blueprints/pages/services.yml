@@ -5,145 +5,142 @@ tabs:
     label: Contenu
     columns:
       - width: 1/1
-        fields:
-          # === NOS SERVICES ===
-          nosServicesHeading:
-            label: Nos Services
-            type: headline
+        sections:
+          nosServices:
+            type: fields
+            fields:
+              # === NOS SERVICES ===
+              nosServicesHeading:
+                label: Nos Services
+                type: headline
 
-          nosServices_titre:
-            label: Titre de la section
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - list
+              nosServices_titre:
+                label: Titre de la section
+                type: text
+                width: 1/1
 
-          nosServices_colonne_gauche:
-            label: Colonne de gauche
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - image
-              - feature-item
-              - list
-              - spacer
-            width: 1/2
+              nosServices_colonne_gauche:
+                label: Colonne de gauche
+                type: blocks
+                pretty: true
+                fieldsets:
+                  - heading
+                  - text
+                  - image
+                  - feature-item
+                  - list
+                  - spacer
+                width: 1/2
 
-          nosServices_colonne_droite:
-            label: Colonne de droite
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - image
-              - feature-item
-              - list
-              - spacer
-            width: 1/2
-
-          # === NOTRE DÉMARCHE ===
-          notreDemarcheHeading:
-            label: Notre Démarche
-            type: headline
-
-          notreDemarche_titre:
-            label: Titre de la section
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - list
+              nosServices_colonne_droite:
+                label: Colonne de droite
+                type: blocks
+                pretty: true
+                fieldsets:
+                  - heading
+                  - text
+                  - image
+                  - feature-item
+                  - list
+                  - spacer
+                width: 1/2
 
           notreDemarche:
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - image
-              - feature-item
-              - features-grid
-              - list
-              - button
-              - spacer
+            type: fields
+            fields:
+              # === NOTRE DÉMARCHE ===
+              notreDemarcheHeading:
+                label: Notre Démarche
+                type: headline
 
-          # === CONTRÔLE DES BORNES DE RECHARGE ===
-          controleBornesHeading:
-            label: Contrôle des bornes de recharge
-            type: headline
+              notreDemarche_titre:
+                label: Titre de la section
+                type: text
+                width: 1/1
 
-          controleBornes_titre:
-            label: Titre de la section
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - list
+              notreDemarche:
+                type: blocks
+                pretty: true
+                fieldsets:
+                  - heading
+                  - text
+                  - image
+                  - feature-item
+                  - features-grid
+                  - list
+                  - button
+                  - spacer
+                width: 1/1
 
-          controleBornes_colonne_gauche:
-            label: Colonne de gauche
-            type: blocks
-            fieldsets:
-              - soustitre
-              - text
-              - list
-              - image
-            pretty: true
-            width: 1/2
+          controleBornes:
+            type: fields
+            fields:
+              # === CONTRÔLE DES BORNES DE RECHARGE ===
+              controleBornesHeading:
+                label: Contrôle des bornes de recharge
+                type: headline
 
-          controleBornes_colonne_droite:
-            label: Colonne de droite
-            type: blocks
-            fieldsets:
-              - soustitre
-              - text
-              - list
-              - image
-            pretty: true
-            width: 1/2
+              controleBornes_titre:
+                label: Titre de la section
+                type: text
+                width: 1/1
 
-          # === CONTRÔLES PHOTOVOLTAÏQUES ===
-          controlePhotovoltaiqueHeading:
-            label: Contrôles photovoltaïques
-            type: headline
+              controleBornes_colonne_gauche:
+                label: Colonne de gauche
+                type: blocks
+                fieldsets:
+                  - soustitre
+                  - text
+                  - list
+                  - image
+                pretty: true
+                width: 1/2
 
-          controlePhotovoltaique_titre:
-            label: Titre de la section
-            type: blocks
-            pretty: true
-            fieldsets:
-              - heading
-              - text
-              - list
+              controleBornes_colonne_droite:
+                label: Colonne de droite
+                type: blocks
+                fieldsets:
+                  - soustitre
+                  - text
+                  - list
+                  - image
+                pretty: true
+                width: 1/2
 
-          controlePhotovoltaique_colonne_gauche:
-            label: Colonne de gauche
-            type: blocks
-            fieldsets:
-              - soustitre
-              - text
-              - list
-              - image
-            pretty: true
-            width: 1/2
+          controlePhotovoltaique:
+            type: fields
+            fields:
+              # === CONTRÔLES PHOTOVOLTAÏQUES ===
+              controlePhotovoltaiqueHeading:
+                label: Contrôles photovoltaïques
+                type: headline
 
-          controlePhotovoltaique_colonne_droite:
-            label: Colonne de droite
-            type: blocks
-            fieldsets:
-              - soustitre
-              - text
-              - list
-              - image
-            pretty: true
-            width: 1/2
+              controlePhotovoltaique_titre:
+                label: Titre de la section
+                type: text
+                width: 1/1
+
+              controlePhotovoltaique_colonne_gauche:
+                label: Colonne de gauche
+                type: blocks
+                fieldsets:
+                  - soustitre
+                  - text
+                  - list
+                  - image
+                pretty: true
+                width: 1/2
+
+              controlePhotovoltaique_colonne_droite:
+                label: Colonne de droite
+                type: blocks
+                fieldsets:
+                  - soustitre
+                  - text
+                  - list
+                  - image
+                pretty: true
+                width: 1/2
 
   seo:
     extends: seo/page

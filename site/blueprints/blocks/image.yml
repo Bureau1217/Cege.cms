@@ -1,6 +1,7 @@
 name: Image
 label: Image
 icon: image
+preview: image
 
 fields:
   image:
