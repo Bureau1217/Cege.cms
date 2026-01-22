@@ -19,16 +19,28 @@ tabs:
                 type: text
                 width: 1/2
 
-              formulaire:
-                label: Contenu du formulaire
-                type: blocks
-                pretty: true
-                fieldsets:
-                  - heading
-                  - text
-                  - contact-form
-                  - spacer
-                width: 1/2
+              formulaire_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              formulaire_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               formulaire_intro:
                 label: Texte d'introduction
@@ -39,6 +51,17 @@ tabs:
                   - text
                   - list
                 help: "Texte affiche a gauche du formulaire"
+                width: 1/2
+
+              formulaire:
+                label: Contenu du formulaire
+                type: blocks
+                pretty: true
+                fieldsets:
+                  - heading
+                  - text
+                  - contact-form
+                  - spacer
                 width: 1/2
 
   seo:

@@ -21,6 +21,17 @@ fields:
       link: Simple lien
     default: primary
     width: 1/2
+  color:
+    label: Couleur du bouton
+    type: select
+    options:
+      primary: Principale
+      secondary: Secondaire
+      accent: Accent
+      neutral: Blanc
+      dark: Noir
+    empty: "Par défaut"
+    width: 1/2
   align:
     label: Alignement
     type: select

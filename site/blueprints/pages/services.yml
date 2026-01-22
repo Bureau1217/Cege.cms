@@ -17,7 +17,30 @@ tabs:
               nosServices_titre:
                 label: Titre de la section
                 type: text
-                width: 1/1
+                width: 1/2
+
+              nosServices_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              nosServices_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               nosServices_colonne_gauche:
                 label: Colonne de gauche
@@ -27,7 +50,6 @@ tabs:
                   - heading
                   - text
                   - image
-                  - feature-item
                   - list
                   - spacer
                 width: 1/2
@@ -40,7 +62,7 @@ tabs:
                   - heading
                   - text
                   - image
-                  - feature-item
+                  - features-grid
                   - list
                   - spacer
                 width: 1/2
@@ -56,7 +78,30 @@ tabs:
               notreDemarche_titre:
                 label: Titre de la section
                 type: text
-                width: 1/1
+                width: 1/2
+
+              notreDemarche_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              notreDemarche_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               notreDemarche:
                 type: blocks
@@ -65,7 +110,6 @@ tabs:
                   - heading
                   - text
                   - image
-                  - feature-item
                   - features-grid
                   - list
                   - button
@@ -83,7 +127,30 @@ tabs:
               controleBornes_titre:
                 label: Titre de la section
                 type: text
-                width: 1/1
+                width: 1/2
+
+              controleBornes_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              controleBornes_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               controleBornes_colonne_gauche:
                 label: Colonne de gauche
@@ -118,7 +185,30 @@ tabs:
               controlePhotovoltaique_titre:
                 label: Titre de la section
                 type: text
-                width: 1/1
+                width: 1/2
+
+              controlePhotovoltaique_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              controlePhotovoltaique_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               controlePhotovoltaique_colonne_gauche:
                 label: Colonne de gauche

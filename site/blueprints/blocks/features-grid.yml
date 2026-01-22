@@ -32,6 +32,42 @@ fields:
         label: Titre
         type: text
 
+      icon_color:
+        label: Couleur du picto
+        type: select
+        options:
+          primary: Principale
+          secondary: Secondaire
+          accent: Accent
+          neutral: Blanc
+          dark: Noir
+        empty: "Par défaut"
+        width: 1/3
+
+      text_color:
+        label: Couleur du texte
+        type: select
+        options:
+          primary: Principale
+          secondary: Secondaire
+          accent: Accent
+          neutral: Blanc
+          dark: Noir
+        empty: "Par défaut"
+        width: 1/3
+
+      background_color:
+        label: Couleur de fond
+        type: select
+        options:
+          primary: Principale
+          secondary: Secondaire
+          accent: Accent
+          neutral: Blanc
+          dark: Noir
+        empty: "Par défaut"
+        width: 1/3
+
       text:
         label: Description
         type: textarea

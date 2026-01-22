@@ -55,7 +55,6 @@ fields:
       - heading
       - text
       - image
-      - feature-item
       - features-grid
       - testimonials
       - contact-form

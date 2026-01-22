@@ -80,3 +80,15 @@ fields:
       outline: Bouton contour
     default: primary
     width: 1/2
+
+  buttonColor:
+    label: Couleur du bouton
+    type: select
+    options:
+      primary: Principale
+      secondary: Secondaire
+      accent: Accent
+      neutral: Blanc
+      dark: Noir
+    empty: "Par défaut"
+    width: 1/2

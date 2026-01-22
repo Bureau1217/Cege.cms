@@ -43,7 +43,30 @@ tabs:
               notreEntreprise_titre:
                 label: Titre de la section
                 type: text
-                width: 1/1
+                width: 1/2
+
+              notreEntreprise_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              notreEntreprise_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               notreEntreprise_colonne_gauche:
                 label: Colonne de gauche
@@ -53,7 +76,6 @@ tabs:
                   - heading
                   - text
                   - image
-                  - feature-item
                   - list
                   - spacer
                 width: 1/2
@@ -66,9 +88,66 @@ tabs:
                   - heading
                   - text
                   - image
-                  - feature-item
                   - list
                   - spacer
+                width: 1/2
+
+          nosServices:
+            type: fields
+            fields:
+              # === NOS SERVICES ===
+              nosServicesHeading:
+                label: Nos Services
+                type: headline
+
+              nosServices_titre:
+                label: Titre de la section
+                type: text
+                width: 1/2
+
+              nosServices_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              nosServices_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
+
+              nosServices_cartes_taille:
+                label: Taille des cartes
+                type: select
+                options:
+                  small: Petite
+                  medium: Moyenne
+                  large: Grande
+                empty: "Par défaut"
+                width: 1/2
+
+              nosServices_cartes_couleur:
+                label: Couleur des titres de cartes
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
                 width: 1/2
 
           avis:
@@ -82,7 +161,30 @@ tabs:
               avis_titre:
                 label: Titre de la section
                 type: text
-                width: 1/1
+                width: 1/2
+
+              avis_titre_couleur:
+                label: Couleur du titre
+                type: select
+                options:
+                  primary: Principale
+                  secondary: Secondaire
+                  accent: Accent
+                  neutral: Blanc
+                  dark: Noir
+                empty: "Par défaut"
+                width: 1/4
+
+              avis_titre_taille:
+                label: Taille du titre
+                type: select
+                options:
+                  h1: H1
+                  h2: H2
+                  h3: H3
+                  h4: H4
+                empty: "Par défaut"
+                width: 1/4
 
               avis:
                 type: blocks
