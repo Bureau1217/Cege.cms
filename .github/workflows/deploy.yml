@@ -1,0 +1,41 @@
+name: Deploy CMS to IONOS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Deploy via SFTP
+        run: |
+          lftp -u "$SFTP_USER","$SFTP_PASSWORD" sftp://"$SFTP_HOST" -e "
+            set sftp:auto-confirm yes;
+            mirror -R --verbose --only-newer --delete \
+              --exclude .git/ \
+              --exclude .github/ \
+              --exclude content/ \
+              --exclude media/ \
+              --exclude site/accounts/ \
+              --exclude site/sessions/ \
+              --exclude site/cache/ \
+              --exclude .env \
+              --exclude .DS_Store \
+              ./ $SFTP_REMOTE_DIR;
+            quit"
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_REMOTE_DIR: ${{ secrets.SFTP_CMS_DIR }}

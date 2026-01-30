@@ -1,0 +1,40 @@
+# Kirby .htaccess
+
+# Rewrite rules
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+
+# Block files and folders beginning with a dot
+RewriteRule (^|/)\.(?!well-known) - [F]
+
+# Block text files in the content folder
+RewriteRule ^content/(.*)\.(txt|md|mdown)$ - [F]
+
+# Block all files in the site folder
+RewriteRule ^site/(.*) - [F]
+
+# Block all files in the kirby folder
+RewriteRule ^kirby/(.*) - [F]
+
+# Make panel links work
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^panel/(.*) index.php [L]
+
+# Make site links work
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) index.php [L]
+</IfModule>
+
+# Compress text files
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
