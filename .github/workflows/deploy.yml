@@ -18,6 +18,9 @@ jobs:
       - name: Install dependencies
         run: composer install --no-dev --optimize-autoloader
 
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
       - name: Deploy via SFTP
         run: |
           lftp -u "$SFTP_USER","$SFTP_PASSWORD" sftp://"$SFTP_HOST" -e "
