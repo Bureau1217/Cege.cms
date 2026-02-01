@@ -5,6 +5,10 @@
 RewriteEngine on
 RewriteBase /
 
+# Redirect root to panel
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /panel [R=302,L]
+
 # Block files and folders beginning with a dot
 RewriteRule (^|/)\.(?!well-known) - [F]
 

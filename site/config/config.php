@@ -2,14 +2,17 @@
 
 return [
   'debug' => true,
+  'panel' => [
+    'install' => true
+  ],
   'api' => [
-    'basicAuth' => false,        // ❌ désactive l'auth
-    'allowInsecure' => true      // ✅ accepte HTTP
+    'basicAuth' => false,
+    'allowInsecure' => true
   ],
   'kql' => [
-    'auth' => false,             // ✅ KQL sans login
+    'auth' => false,
     'intercept' => function ($type, $key, $value) {
-      return true;  // Autorise TOUT en mode dev
+      return true;
     }
   ],
   'hooks' => require __DIR__ . '/hooks.php'
