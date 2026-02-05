@@ -1,0 +1,25 @@
+type: group
+fields:
+  seoHeadline:
+    label: Referencement (SEO)
+    type: headline
+
+  metaTitle:
+    label: Titre SEO
+    type: text
+    placeholder: "Titre affiche dans Google"
+    help: "Laissez vide pour utiliser le titre de la page"
+    width: 1/2
+
+  ogImage:
+    label: Image de partage (Open Graph)
+    type: files
+    multiple: false
+    width: 1/2
+
+  metaDescription:
+    label: Description SEO
+    type: textarea
+    buttons: false
+    placeholder: "Description affichee dans les resultats Google"
+    help: "Idealement entre 120 et 160 caracteres"

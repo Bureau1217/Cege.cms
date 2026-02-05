@@ -116,7 +116,7 @@ tabs:
 
   # Onglet SEO
   seo:
-    extends: seo/site
+    extends: tabs/seo
 
   # Onglet Cookies
   cookies:

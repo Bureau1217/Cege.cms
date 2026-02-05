@@ -158,6 +158,15 @@ tabs:
                 label: Avis
                 type: headline
 
+              avis_visible:
+                label: Afficher la section Avis
+                type: toggle
+                text:
+                  - Masquée
+                  - Visible
+                default: true
+                width: 1/1
+
               avis_titre:
                 label: Titre de la section
                 type: text
@@ -197,23 +206,11 @@ tabs:
                   - spacer
                 width: 1/1
 
-          image:
-            type: fields
-            fields:
-              # === IMAGE ===
-              imageHeading:
-                label: Image
-                type: headline
-
-              image:
-                type: blocks
-                pretty: true
-                fieldsets:
-                  section-full-image:
-                    preview: section-full-image
-                  image:
-                    preview: image
-                width: 1/1
-
   seo:
-    extends: seo/page
+    label: SEO
+    icon: search
+    columns:
+      - width: 1/1
+        fields:
+          seoFields:
+            extends: fields/seo

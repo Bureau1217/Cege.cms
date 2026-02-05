@@ -28,4 +28,10 @@ tabs:
               - section-formulaire
 
   seo:
-    extends: seo/page
+    label: SEO
+    icon: search
+    columns:
+      - width: 1/1
+        fields:
+          seoFields:
+            extends: fields/seo

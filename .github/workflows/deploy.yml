@@ -21,6 +21,17 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
+      - name: Create .env file
+        run: |
+          cat << EOF > .env
+          SMTP_HOST=${{ secrets.SMTP_HOST }}
+          SMTP_PORT=${{ secrets.SMTP_PORT }}
+          SMTP_SECURITY=${{ secrets.SMTP_SECURITY }}
+          SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}
+          CONTACT_TO=${{ secrets.CONTACT_TO }}
+          EOF
+
       - name: Deploy via SFTP
         run: |
           lftp -u "$SFTP_USER","$SFTP_PASSWORD" sftp://"$SFTP_HOST" -e "
@@ -33,7 +44,6 @@ jobs:
               --exclude site/accounts/ \
               --exclude site/sessions/ \
               --exclude site/cache/ \
-              --exclude .env \
               --exclude .DS_Store \
               ./ $SFTP_REMOTE_DIR;
             quit"

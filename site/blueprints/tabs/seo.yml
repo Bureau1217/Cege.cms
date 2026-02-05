@@ -1,0 +1,51 @@
+label: SEO
+icon: search
+columns:
+  - width: 1/1
+    fields:
+      seoGlobalHeadline:
+        label: Referencement global (SEO)
+        type: headline
+
+      metaTemplate:
+        label: Template de titre
+        type: text
+        default: "{{ title }} - {{ site.title }}"
+        help: "Variables disponibles : {{ title }}, {{ site.title }}"
+        width: 1/2
+
+      twitterCardType:
+        label: Type de carte Twitter
+        type: select
+        default: summary
+        options:
+          summary: Petite image
+          summary_large_image: Grande image
+        width: 1/2
+
+      metaDescription:
+        label: Description par defaut
+        type: textarea
+        buttons: false
+        placeholder: "Description globale du site"
+        help: "Utilisee si la page n'a pas de description propre"
+
+      ogDescription:
+        label: Description Open Graph par defaut
+        type: textarea
+        buttons: false
+        placeholder: "Description pour les partages sur les reseaux sociaux"
+        help: "Si vide, la description SEO sera utilisee"
+
+      ogImage:
+        label: Image Open Graph par defaut
+        type: files
+        multiple: false
+        help: "Image par defaut pour les partages (recommande : 1200x630px)"
+        width: 1/2
+
+      twitterAuthor:
+        label: Compte Twitter
+        type: text
+        placeholder: "@moncompte"
+        width: 1/2
