@@ -4,6 +4,31 @@
  * Accédez à: https://cms.cegeswiss.com/test-webhook.php
  */
 
+echo "<h2>Test Webhook GitHub</h2>";
+echo "<pre>";
+
+// Vérifier si le fichier .env existe
+$envPath = __DIR__ . '/.env';
+echo "Chemin .env: $envPath\n";
+echo "Fichier .env existe: " . (file_exists($envPath) ? "OUI" : "NON") . "\n";
+
+if (file_exists($envPath)) {
+    echo "Contenu .env (premières lignes):\n";
+    $lines = file($envPath);
+    foreach ($lines as $i => $line) {
+        if ($i < 5) {
+            // Masquer les valeurs sensibles
+            if (strpos($line, 'TOKEN') !== false || strpos($line, 'PASSWORD') !== false) {
+                echo preg_replace('/=.+/', '=***MASQUÉ***', $line);
+            } else {
+                echo $line;
+            }
+        }
+    }
+    echo "\n";
+}
+
+// Charger dotenv
 require __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -11,9 +36,6 @@ $dotenv->safeLoad();
 
 $githubToken = getenv('GITHUB_TOKEN') ?: ($_ENV['GITHUB_TOKEN'] ?? null);
 $githubRepo = getenv('GITHUB_REPO') ?: ($_ENV['GITHUB_REPO'] ?? null);
-
-echo "<h2>Test Webhook GitHub</h2>";
-echo "<pre>";
 
 echo "GITHUB_REPO: " . ($githubRepo ? $githubRepo : "NON DÉFINI") . "\n";
 echo "GITHUB_TOKEN: " . ($githubToken ? substr($githubToken, 0, 10) . "..." : "NON DÉFINI") . "\n\n";
