@@ -5,10 +5,11 @@
  */
 function triggerGitHubRebuild(): void
 {
-    $githubToken = $_ENV['GITHUB_TOKEN'] ?? null;
-    $githubRepo = $_ENV['GITHUB_REPO'] ?? null; // format: "username/repo"
+    $githubToken = getenv('GITHUB_TOKEN') ?: ($_ENV['GITHUB_TOKEN'] ?? null);
+    $githubRepo = getenv('GITHUB_REPO') ?: ($_ENV['GITHUB_REPO'] ?? null);
 
     if (!$githubToken || !$githubRepo) {
+        error_log('GitHub webhook: Missing GITHUB_TOKEN or GITHUB_REPO');
         return;
     }
 
@@ -32,8 +33,12 @@ function triggerGitHubRebuild(): void
         ]),
     ]);
 
-    curl_exec($ch);
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
+
+    // Log pour debug
+    error_log("GitHub webhook: HTTP $httpCode - Repo: $githubRepo");
 }
 
 return [
